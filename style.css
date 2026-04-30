@@ -294,13 +294,163 @@ footer .footer-container {
 }
 @media screen and(max-width:576px) {
     .header
+    .container
     .nav
-    .nav-menu {
-        display: none;
+    .nav-menu
+    .logo
+    .menu {
+        flex-direction: column;
     }
  .skills-container container {
         flex-direction: column;
     }
+
     
     
+}
+@media only screen and (max-width: 768px) {
+  /* এখানে মোবাইলের জন্য আপনার CSS লিখুন */
+  .logo{
+    flex-direction: column;
+    position: relative;
+        order: 1; /* নিশ্চিত করতে যে লোগো সবার আগে থাকবে */
+    margin-bottom: 20px;
+  }
+  .menu 
+  {  
+    flex-direction: column;
+        order: 2; নিশ্চিত করতে যে লোগো সবার আগে থাকবে
+    margin-bottom: 20px; */
+  }
+  .container {
+    width: 100%;
+     /* আপনার মেইন কন্টেইনার ক্লাসের নাম দিন */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* সবকিছু মাঝখানে রাখার জন্য */
+    text-align: center;
+  
+  }
+ 
+}
+@media only screen and (max-width: 768px) {
+    /* বাম পাশের ভার্টিক্যাল লেখাটি হাইড করার জন্য */
+    /* আপনার ক্লাসের নাম অনুযায়ী নিচের যেকোনো একটি ট্রাই করুন */
+    .developer-text, .side-text, .developer { 
+        display: none !important; 
+    }
+
+    /* মেইন কন্টেন্টকে পুরো জায়গা জুড়ে দেখানোর জন্য */
+    #banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px;
+        width: 100%;
+        margin: 0 auto;
+          width: 100%;
+        min-height: auto;
+        padding: 40px 15px;
+        overflow: hidden;
+    }
+
+    .banner-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* নাম যাতে এক লাইনে থাকে বা সুন্দরভাবে ভাঙে */
+    .banner-content h2{
+          /* font-size: 1.5rem !important;  */
+        margin-bottom: 10px;
+        /* line-height: 1.2; */
+        /* width: 100%; */
+        margin-left: 20px;
+        font-size: 1.8rem !important; /* সাইজটি কমিয়ে ১.৮ বা ২ দিন */
+        white-space: normal;
+        word-wrap: break-word;
+    }
+    .banner-content h2:nth-of-type(2),
+    .btn{
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    body {
+    overflow-x: hidden; /* ডান দিকের বাড়তি স্ক্রল বন্ধ করবে */
+    width: 100%;
+}
+    /* ১. ওই ব্যাকগ্রাউন্ড টেক্সটটি হাইড করার জন্য */
+    /* আপনার ক্লাসের নাম অনুযায়ী নিচেরটি ঠিক করে নিন */
+    /* .developer-bg-text, .side-text { 
+        display: none !important; 
+    } */
+
+    /* ২. মেইন কন্টেইনারকে ফিক্স করা */
+    #banner {
+        overflow: hidden; /* যাতে কোনো কিছু স্ক্রিনের বাইরে না যায় */
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* ৩. নাম 'Rahmatullah' ছোট করা যাতে এক লাইনে ধরে */
+    .banner-content h1, .banner-content h2 {
+        font-size: 1.8rem !important; /* সাইজটি কমিয়ে ১.৮ বা ২ দিন */
+        white-space: normal;
+        word-wrap: break-word;
+    }
+    header {
+        /* মোবাইলে ওই বড় 'developer' ইমেজটি হাইড করে শুধু পেছনের হালকা ব্যাকগ্রাউন্ড রাখা */
+        background: url(./images/developer.png), url(./images/header_bg.png)  
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: contain; /* ইমেজটি যাতে স্ক্রিনের বাইরে না যায় */
+     
+        
+        background-color: #FFF8F3; /* ব্যাকগ্রাউন্ড কালার ঠিক রাখা */
+    }
+
+    .about-container {
+        display: flex;
+        flex-direction: column; /* সবকিছু নিচে নিচে আসবে */
+        align-items: center;
+    }
+
+    /* ২. শিরোনাম এবং প্যারাগ্রাফ ঠিক করা */
+    .section-heading h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .section-heading p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #757575;
+        margin-bottom: 30px;
+    }
+
+    /* ৩. ইনফো কার্ডগুলো (Name, Email) একটার নিচে একটা সাজানো */
+    .about-info {
+        display: flex;
+        flex-direction: column; /* পাশাপাশি না রেখে নিচে নিচে */
+        gap: 20px;
+        width: 100%;
+    }
+
+    .info-card {
+        text-align: center;
+    }
+
+    .info-card p {
+        margin-bottom: 5px;
+    }
+
+    .info-card h4 {
+        font-size: 1.1rem;
+        color: #474747;
+    }
+    }
 }
