@@ -459,5 +459,12 @@ footer .footer-container {
         font-size: 1.1rem;
         color: #474747;
     }
+    .skills{
+        display: grid;
+        grid-template-columns: repeat(2,2fr);
     }
-}
+    .skills-container container{
+        display: grid;
+        grid-template-columns: repeat(2,2fr) 
+    }
+    }
