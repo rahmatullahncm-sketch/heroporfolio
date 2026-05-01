@@ -30,6 +30,8 @@
     color: white;
     cursor: pointer;
     margin-left: 30px;
+       text-decoration: none; /* আন্ডারলাইন মুছে ফেলার জন্য */
+    display: inline-block;
 }
 
 
@@ -133,6 +135,10 @@ nav .menu a {
     max-width: 585px;
     vertical-align: middle;
     image-background: none;
+}
+.anchorbutton a{
+    text-decoration: none;
+
 }
 
 #about,
